@@ -10,7 +10,7 @@ header{
 
 .header-container {
     height: 100%;
-    max-width: 90ch;
+    max-width: 960px;
     margin: auto;
 }
 
