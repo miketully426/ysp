@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #9c36b5;
+    height: 100px;
+}
+
+.header-container {
+    height: 100%;
+    max-width: 90ch;
+    margin: auto;
+}
+
+img {
+    height: 100%;
+    padding: 20px
+    
+}
+
+.main-image {
+    padding: 0;
+    width: 100%;
+    height:auto;
+}
