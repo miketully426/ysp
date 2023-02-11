@@ -2,9 +2,10 @@
 export interface Props {
 	title: string;
 }
+import Header from '../components/Header.astro';
+import '../styles/global.css'
 
 const { title } = Astro.props;
-import '../styles/global.css'
 
 ---
 
@@ -13,10 +14,13 @@ import '../styles/global.css'
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/images/y-icon.png" />
+		<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Concert+One">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+	<Header></Header>
 	<body>
 		<slot />
 	</body>

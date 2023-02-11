@@ -1,20 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
 ---
 <!DOCTYPE html>
-<Layout title="Welcome to Astro.">
-		<Header></Header>
-		<img class='main-image' src='/images/ysp-stage.jpeg'>
+<Layout title="Youth Sing Praise">
+		<div class='main-image-container'>
+			<img class='main-image' src='/images/ysp-stage.jpeg'>
+			<div class='image-text-box'>
+				<div class='image-text'>YSP 2023</div> 
+				<div class="image-text">Coming Soon</div>
+			</div>
+		</div>
 </Layout>
 
 <style>
-	main {
+
+	/* main {
 		margin: auto;
-		/* padding: 1.5rem; */
+		padding: 1.5rem;
 		max-width: 90ch;
-	}
+	} */
+
 	/* h1 {
 		font-size: 3rem;
 		font-weight: 800;
