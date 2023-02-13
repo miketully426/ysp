@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+    <div class="about-nav-box">
+        <div class="about-nav-container">
+            <h2><a href="/about/">About YSP</a></h2>
+            <ul>
+                <li><a href="/about/mission">Mission & Vision</a></li>
+                <li><a href="/about/values">Core Values</a></li>
+                <li><a href="/about/who">Who</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="about-content">
+        <p>
+            Youth Sing Praise began in 1982 as a ministry of the Oblates of Mary
+            Immaculate at the National Shrine of Our Lady of the Snows in
+            Belleville, IL. The original idea was to welcome young people from
+            every diocese in the US to learn and perform new liturgical music.
+            The hope was to inspire contemporary liturgical music to be written
+            and sung in liturgical settings. Somewhere along the line, it
+            morphed into the performance of a faith-based musical including the
+            occasional commissioning of entirely new shows. It has been a fluid,
+            changing program which, we believe, affirms that the Holy Spirit is
+            alive and active in our work.
+        </p>
+        <p>
+            Theatrical youth often find themselves living on the fringes of
+            their peer society. At Youth Sing Praise these gifted young people
+            find Oblate hospitality, affirmation and encouragement. The Youth
+            Sing Praise experience shows them that they are not alone in their
+            faith journey or discernment of a vocation. Since 2011, the YSP
+            Foundation has been responsible for funding and programming, and in
+            2014 received designation as a 501c3 charity organization.
+            Enrollment is up 60% in 3 years, and the Foundation has raised over
+            $50,000 in donations from friends and supporters in that time.
+        </p>
+    </div>
+</Layout>
+<style>
+    .about-nav-box {
+        font-family: "Concert One";
+        line-height: 1.5;
+        background-color: #9c36b5;
+        margin: 20px;
+        width: 25ch;
+        border-radius: 30px;
+    }
+    .about-nav-container {
+        margin: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: #e9ecef;
+    }
+    .about-nav-container h2 {
+        font-size: 32px;
+    }
+    .about-nav-container li {
+        font-size: 20px;
+        list-style: none;
+    }
+    .about-content{
+        line-height: 1.3;
+    }
+    .about-content{
+        font-family: "Concert One";
+        font-size: 18px;
+        color: #e9ecef;
+        background-color: #9c36b5;
+        border-radius: 30px;
+    }
+    .about-content p{
+        margin: 40px;
+    }
+</style>
