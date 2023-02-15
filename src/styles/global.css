@@ -11,7 +11,13 @@ FONT SIZE SYSTEM (px)
     padding: 0;
     box-sizing: border-box;
 }
-header{
+
+html,
+body {
+    height: 100%;
+}
+
+header {
     background-color: #9c36b5;
     height: 100px;
 }
@@ -20,30 +26,48 @@ header{
     height: 100%;
     max-width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-text {
+.main-nav {
     color: #fff;
-    font-size: 24px;
+    font-size: 30px;
+    font-family: 'Concert One';
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-nav a:hover{
+    text-decoration: none;
+    color: yellow;
 }
 
 img {
     height: 100%;
     padding: 20px
-    
 }
 
 .main-image {
     padding: 0;
-    width: 100%;
-    height:auto;
+    height: 500%;
 }
 
-.main-image-container{
+.main-image-container {
     position: relative;
     text-align: center;
+    background-image: url('/images/ysp-stage.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.image-text-box{
+
+.image-text-box {
     top: 50%;
     left: 50%;
     text-align: center;
@@ -53,6 +77,7 @@ img {
     background-color: rgba(248, 240, 252, 0.4);
 
 }
+
 .image-text {
     color: #862e9c;
     font-size: 64px;
