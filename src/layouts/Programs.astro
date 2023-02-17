@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Programs">
+    <main class="programs">
+        <nav class="program-nav">
+                <a class='ysp-btn' href="/programs">YSP</a>
+                <a class='yspjr-btn' href="/programs/yspjr">YSP JR</a>
+        </nav>
+        <div class="programs-container">
+            <section class="programs-content">
+                <slot />
+            </section>
+        </div>
+    </main>
+</Layout>
+<style>
+    main{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .program-nav{
+        margin: 60px 10% 0 10%;
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .program-nav a{
+        text-decoration: none;
+        padding: 16px;
+        border-radius: 30px;
+        background-color: #9c36b5;
+        color: #fff;
+    }
+    .program-nav a:active,
+    .program-nav a:hover {
+        color: yellow;
+    }
+    .programs-container{
+
+        width: 80%;
+        margin: 40px 10% 0 10%;
+        background-color: #9c36b5;
+        border-radius: 30px;
+    }
+    .programs-content{
+        font-size: 18px;
+        color: #e9ecef;
+        padding: 40px;
+    }
+</style>
