@@ -1,13 +1,20 @@
 ---
+export interface Props {
+    title: string;
+}
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+ 
+const { title } = Astro.props;
+
+const color = title === "ysp" ? {ysp: 'color:yellow', yspjr: 'color:#fff'} : {ysp: 'color:#fff', yspjr: 'color:yellow'}
 ---
 
 <Layout title="Programs">
     <main class="programs">
         <nav class="program-nav">
-                <a class='ysp-btn' href="/programs">YSP</a>
-                <a class='yspjr-btn' href="/programs/yspjr">YSP JR</a>
+                <a class='ysp-btn' style={color.ysp} href="/programs">YSP</a>
+                <a class='yspjr-btn' style={color.yspjr} href="/programs/yspjr">YSP JR</a>
         </nav>
         <Card height='auto' width="80%" margin="40px 10% 0 10%">
             <section class="programs-content">
@@ -16,7 +23,7 @@ import Card from "../components/Card.astro";
         </Card>
     </main>
 </Layout>
-<style>
+<style define:vars={{color}}>
     main{
         font-family: 'Josefin Sans', sans-serif;
     }
@@ -31,8 +38,8 @@ import Card from "../components/Card.astro";
         padding: 16px;
         border-radius: 30px;
         background-color: #9c36b5;
-        color: #fff;
     }
+
     .program-nav a:active,
     .program-nav a:hover {
         color: yellow;
@@ -42,5 +49,6 @@ import Card from "../components/Card.astro";
         color: #e9ecef;
         padding: 40px;
         text-align: left;
+        line-height: 1.3;
     }
 </style>

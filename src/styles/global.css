@@ -98,16 +98,6 @@ a .expanded {
     height: 500%;
 }
 
-.main-image-container {
-    position: relative;
-    text-align: center;
-    background-image: url('/images/ysp-stage.jpeg');
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .image-text-box {
     top: 50%;
     left: 50%;
