@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Programs">
@@ -8,11 +9,11 @@ import Layout from "../layouts/Layout.astro";
                 <a class='ysp-btn' href="/programs">YSP</a>
                 <a class='yspjr-btn' href="/programs/yspjr">YSP JR</a>
         </nav>
-        <div class="programs-container">
+        <Card height='auto' width="80%" margin="40px 10% 0 10%">
             <section class="programs-content">
                 <slot />
             </section>
-        </div>
+        </Card>
     </main>
 </Layout>
 <style>
@@ -36,16 +37,10 @@ import Layout from "../layouts/Layout.astro";
     .program-nav a:hover {
         color: yellow;
     }
-    .programs-container{
-
-        width: 80%;
-        margin: 40px 10% 0 10%;
-        background-color: #9c36b5;
-        border-radius: 30px;
-    }
     .programs-content{
-        font-size: 18px;
+        font-size: 20px;
         color: #e9ecef;
         padding: 40px;
+        text-align: left;
     }
 </style>

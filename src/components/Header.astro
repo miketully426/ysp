@@ -1,13 +1,20 @@
 ---
+import Hamburger from "./Hamburger.astro";
 import Nav from "./Nav.astro";
-
 ---
+
+<script>
+    document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".main-nav").classList.toggle("expanded");
+        document.querySelector("img").classList.toggle("expanded");
+
+    });
+</script>
 <header>
     <div class="header-container">
-        <a href="/"><img src="/images/ysp-white.png"></a>
+        <a href="/"><img src="/images/ysp-white.png" /></a>
+        <Hamburger />
         <Nav />
     </div>
 </header>
-<style>
-
-</style>
+<style></style>

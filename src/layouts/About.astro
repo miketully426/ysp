@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="About">
@@ -14,29 +15,42 @@ import Layout from "../layouts/Layout.astro";
                 </ul>
             </nav>
         </aside>
-        <div class="about-container">
+        <Card height='auto' width='auto' margin='0 20px 0 20px'>
             <section class="about-content">
                 <slot />
             </section>
-        </div>
+        </Card>
     </main>
 </Layout>
 <style>
+    .about-nav-box {
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 1.5;
+        background-color: rgba(156, 54, 181, .7);
+        margin: 20px;
+        border-radius: 30px;
+        flex: 0 0 20ch;
+        text-align: center;
+        height: 100%;
+    }
+@media screen and (min-width: 600px){
     .about {
         margin-top: 60px;
         display: flex;
         align-content: flex-start;
         gap: 20px;
-        
     }
     .about-nav-box {
         font-family: 'Josefin Sans', sans-serif;
         line-height: 1.5;
-        background-color: #9c36b5;
+        background-color: rgba(156, 54, 181, .7);
         margin: 20px;
         border-radius: 30px;
-        flex: 0 0 25ch;
+        flex: 0 0 20ch;
+        text-align: left;
+        height: 100%;
     }
+}
     .about-nav-container {
         margin: 20px;
     }
@@ -59,14 +73,10 @@ import Layout from "../layouts/Layout.astro";
     .about-content {
         line-height: 1.5;
     }
-    .about-container{
-        border-radius: 30px;
-        background-color: #9c36b5;
-        flex: 1 0 900px;
-    }
     .about-content {
+        text-align: left;
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         color: #e9ecef;
         padding: 40px;
     }
