@@ -1,0 +1,30 @@
+---
+export interface Props {
+    label: string;
+    name: string;
+    options: Array<any>;
+}
+const { label, name, options } = Astro.props;
+
+---
+
+<label>{label}
+    <select name={name}>
+        {options.map((item) => <option value={item}>{item}</option>)}
+    </select>
+</label>
+
+<style>
+    label {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 20px;
+        color: #e9ecef;
+    }
+    input {
+        border-radius: 30px;
+        height: 24px;
+        width: 25ch;
+        margin-bottom: 8px;
+        padding-left: 1ch;
+    }
+</style>

@@ -7,8 +7,10 @@ import "../styles/global.css";
 
 const { title } = Astro.props;
 
-const backgroundImage = title === 'Youth Sing Praise' ?
-	'url(/images/ysp-2019-stage.jpg)' : 'url(/images/ysp-stage.jpeg)';
+// const backgroundImage = title === 'Youth Sing Praise' ?
+// 	'url(/images/ysp-2019-stage.jpg)' : 'url(/images/ysp-stage.jpeg)';
+
+const backgroundImage = 'url(/images/ysp-2019-stage.jpg)';
 ---
 
 <!DOCTYPE html>
@@ -17,14 +19,9 @@ const backgroundImage = title === 'Youth Sing Praise' ?
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/images/y-icon.png" />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Concert+One"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
-			rel="stylesheet"
-		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nunito&family=Roboto:wght@500&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>

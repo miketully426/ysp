@@ -1,0 +1,28 @@
+---
+export interface Props {
+    label: string;
+    name: string;
+}
+
+const { label, name } = Astro.props;
+---
+
+<label
+    >{label}
+    <input type="text" name={name} />
+</label>
+
+<style>
+    label {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 20px;
+        color: #e9ecef;
+    }
+    input {
+        border-radius: 30px;
+        height: 24px;
+        width: 25ch;
+        margin-bottom: 8px;
+        padding-left: 1ch;
+    }
+</style>
