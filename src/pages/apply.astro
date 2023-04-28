@@ -39,8 +39,9 @@ const danceExp = ['None', '0-2 years', '3-5 years', '5+ years']
 </script>
 <Layout title="Apply">
 	<form id="form">
-
-	<Card height="auto" width="80%" margin="40px 15% 0 15%">
+	<div class='card-label'>Contact Info</div>
+	<Card height="auto" width="70%" margin="0 15% 0 15%">
+		<div class='form-container'>
 		<Input label="First Name" name='firstName'/>
 		<Input label="Last Name" name='lastName'/>
 		<br/>
@@ -57,19 +58,25 @@ const danceExp = ['None', '0-2 years', '3-5 years', '5+ years']
 		<br/>
 		<Input label="Parent Email" name='parentEmail'/>
 		<Input label="Parent Phone Number" name='parentNumber'/>
-
+	</div>
 	</Card>
-	<Card height="auto" width="70%" margin="40px 15% 0 15%" >
+	<div class='card-label'>Affiliations</div>
+	<Card height="auto" width="70%" margin="0 15% 0 15%" >
+		<div class='form-container'>
 		<Input label="22-23 High School" name='school'/>
 		<Select label="Graduation Year" name='gradYear' options={gradYears} />
 		<Input label='Parish' name='parish'/>
+		</div>
 	</Card>
-	<Card height="auto" width="70%" margin="40px 15% 0 15%" >
+	<div class='card-label'>Performer Info</div>
+	<Card height="auto" width="70%" margin="0 15% 0 15%" >
+		<div class='form-container'>
 		<Input label="Voice Type" name='voiceType'/>
-		<Select label="T-Shirt Size" name='shirtSize' options={shirtSizes} />
 		<Select label='Dance Experience' name='danceExp' options={danceExp} /> 
+		<Select label="T-Shirt Size" name='shirtSize' options={shirtSizes} />
+		<br/>
 		<Input label='Audition Video Link' name='audition' />
-
+		</div>
 	</Card>
 	<button id="submit" type="submit">Submit</button>
 </form>
@@ -78,10 +85,8 @@ const danceExp = ['None', '0-2 years', '3-5 years', '5+ years']
 
 <style>
 	.form-container {
-		width: 70%;
-		margin: 40px 15% 0 15%;
-		background-color: rgba(156, 54, 181, 0.8);
-		border-radius: 30px;
+		padding: 20px 0 20px 40px;
+		text-align: left;
 	}
 	.form-content {
 		font-size: 24px;
@@ -94,10 +99,10 @@ const danceExp = ['None', '0-2 years', '3-5 years', '5+ years']
 		background: yellow;
 		border-radius: 30px;
 		width: 10ch;
-		height: 32px;
+		height: 40px;
 		margin-top: 10px;
 		color: #9c36b5;
-		font-size: 16px;
+		font-size: 24px;
 		font-family: "Josefin Sans", sans-serif;
 	}
 	button:hover,
@@ -107,5 +112,15 @@ const danceExp = ['None', '0-2 years', '3-5 years', '5+ years']
 	}
 	form {
 		padding-bottom: 40px;
+	}
+	.card-label{
+		font-family: "Roboto", sans-serif;
+		font-size: 30px;
+		background-color: rgba(156, 54, 181, 0.8);
+		border-radius: 30px 30px 0 0 ;
+		width: 20%;
+		height: 40px;
+		color: #e9ecef;
+		margin: 30px 40% 0 40%;
 	}
 </style>
