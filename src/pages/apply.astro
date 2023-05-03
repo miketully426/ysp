@@ -91,8 +91,12 @@ const voiceTypes = ["", "Bass", "Tenor", "Alto", "Soprano"];
 					field.className = field.className.split(' ')[0];
 				}
 			});
-			const errorBox = document.querySelector('.error-box')
-			errorBox.style.display = "block"
+			if(error){
+				const errorBox = document.querySelector('.error-box')
+				errorBox.style.display = "block"
+			}else{
+				errorBox.style.display = "none"
+			}
 			return error;
 		};
 		const error = checkFields();
