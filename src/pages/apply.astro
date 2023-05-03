@@ -95,8 +95,7 @@ const voiceTypes = ["", "Bass", "Tenor", "Alto", "Soprano"];
 			errorBox.style.display = "block"
 			return error;
 		};
-		let error = checkFields();
-		error = false;
+		const error = checkFields();
 		if (!error) {
 			let requestBody = new FormData(form);
 			fetch(scriptURL, { method: "POST", body: requestBody })
