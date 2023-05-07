@@ -91,17 +91,19 @@ const voiceTypes = ["", "Bass", "Tenor", "Alto", "Soprano"];
 					field.className = field.className.split(' ')[0];
 				}
 			});
-			const errorBox = document.querySelector('.error-box')
-			errorBox.style.display = "block"
+			if(error){
+				const errorBox = document.querySelector('.error-box')
+				errorBox.style.display = "block"
+				submitButton.disabled = false;
+			}
 			return error;
 		};
-		let error = checkFields();
-		error = false;
-		if (!error) {
+		// let error = checkFields();
+		if (!checkFields()) {
 			let requestBody = new FormData(form);
 			fetch(scriptURL, { method: "POST", body: requestBody })
 				.then((response) => {
-					alert("Application sent successful!", response);
+					window.location.href='/confirmation'
 					submitButton.disabled = false;
 				})
 				.catch((error) => {
