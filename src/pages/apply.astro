@@ -94,17 +94,15 @@ const voiceTypes = ["", "Bass", "Tenor", "Alto", "Soprano"];
 			if(error){
 				const errorBox = document.querySelector('.error-box')
 				errorBox.style.display = "block"
-			}else{
-				errorBox.style.display = "none"
+				submitButton.disabled = false;
 			}
 			return error;
 		};
-		const error = checkFields();
-		if (!error) {
+		if (!checkFields()) {
 			let requestBody = new FormData(form);
 			fetch(scriptURL, { method: "POST", body: requestBody })
 				.then((response) => {
-					alert("Application sent successful!", response);
+					window.location.href='/confirmation'
 					submitButton.disabled = false;
 				})
 				.catch((error) => {
