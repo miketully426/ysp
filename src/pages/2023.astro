@@ -1,58 +1,92 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro"
+import Card from "../components/Card.astro";
 import CardLabel from "../components/CardLabel.astro";
-
 ---
+
 <Layout title="2023 Season">
-    <CardLabel label="Who" width={20}/>
-    <Card height="auto" width="70%" margin="0 15% 0 15%">
-        <p class='text-content'>
-            Teens in high school during the 2022-23 school year are invited to apply for this 8-day retreat and theatre program. From freshmen, to graduating seniors, students will spend their days rehearsing, building community, improving their performance skills, and reflecting on the themes of the show.
-        </p>
-    </Card>
-    <CardLabel label="When" width={20}/>
-    <Card height="auto" width="70%" margin="0 15% 0 15%">
-        <p class='text-content'>
-            Camp is June 24-July 2, with a free performance of “Godspell” on July 1 for the community.
-        </p>
-    </Card>
-    <CardLabel label="Where" width={20}/>
-    <Card height="auto" width="70%" margin="0 15% 0 15%">
-        <p class='text-content'>
-            Lodging and rehearsals at <a href="https://www.toddhallretreat.org/">Todd Hall Retreat Center</a> in Columbia, Illinois. <br/>
-            Performance at Immaculate Conception in Columbia, Illinois.
-        </p>
-    </Card>
-    <CardLabel label="How to Apply" width={20}/>
-    <Card height="auto" width="70%" margin="0 15% 0 15%">
-        <p class='text-content'>
-            The <a href="/apply">application</a> process includes a contact form, an audition video, and a recommendation letter. Acceptance is on a rolling basis so you should hear back within a week. Completed tuition payment is due June 1. 
-        </p>
-    </Card>
-    <CardLabel label="Cost" width={20}/>
-    <Card height="auto" width="70%" margin="0 15% 0 15%">
-        <p class='text-content'>
-            A tiered tuition plan means we ask families to pay at a level that fits their means. This contributes to the ministry of this program, allowing any student to participate regardless of financial ability. We appreciate any families who are able to contribute more to so to help with this mission. The actual costs of this all-inclusive camp include: lodging, meals, performance and retreat materials, and more. Families are asked to arrange transportation to and from camp, and to send a few costume pieces if they have them. 
-            <br/>
-            Tuition levels are at $750, $1,000 and $1,500. Sibling discounts are available, and we accept requests for financial assistance. 
-        </p>
-    </Card>
+    <div class="current-container">
+        <CardLabel label="Who" width={20} />
+        <Card height="auto" width="70%" margin="0 15% 0 15%">
+            <p class="text-content">
+                Teens in high school during the 2022-23 school year are invited
+                to apply for this 8-day retreat and theatre program. From
+                freshmen, to graduating seniors, students will spend their days
+                rehearsing, building community, improving their performance
+                skills, and reflecting on the themes of the show.
+            </p>
+        </Card>
+        <CardLabel label="When" width={20} />
+        <Card height="auto" width="70%" margin="0 15% 0 15%">
+            <p class="text-content">
+                Camp is June 24-July 2, with a free performance of “Godspell” on
+                July 1 for the community.
+            </p>
+        </Card>
+        <CardLabel label="Where" width={20} />
+        <Card height="auto" width="70%" margin="0 15% 0 15%">
+            <p class="text-content">
+                Lodging and rehearsals at <a
+                    href="https://www.toddhallretreat.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Todd Hall Retreat Center</a
+                > in Columbia, Illinois. <br />
+                Performance at Immaculate Conception in Columbia, Illinois.
+            </p>
+        </Card>
+        <CardLabel label="How to Apply" width={20} />
+        <Card height="auto" width="70%" margin="0 15% 0 15%">
+            <p class="text-content">
+                The <a href="/apply">application</a> process includes a contact form,
+                an audition video, and a recommendation letter. Acceptance is on
+                a rolling basis so you should hear back within a week. Completed
+                tuition payment is due June 1.
+            </p>
+        </Card>
+        <CardLabel label="Cost" width={20} />
+        <Card height="auto" width="70%" margin="0 15% 0 15%">
+            <p class="text-content">
+                A tiered tuition plan means we ask families to pay at a level
+                that fits their means. This contributes to the ministry of this
+                program, allowing any student to participate regardless of
+                financial ability. We appreciate any families who are able to
+                contribute more to so to help with this mission. The actual
+                costs of this all-inclusive camp include: lodging, meals,
+                performance and retreat materials, and more. Families are asked
+                to arrange transportation to and from camp, and to send a few
+                costume pieces if they have them.
+                <br />
+                Tuition levels are at $750, $1,000 and $1,500. Sibling discounts
+                are available, and we accept requests for financial assistance.
+
+                <a
+                    href="https://youth-sing-praise-foundation-inc.square.site/s/shop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Tuition can be paid here.</a
+                >
+            </p>
+        </Card>
+    </div>
 </Layout>
 <style>
-    	.text-content {
-		font-size: 24px;
-		color: #e9ecef;
-		font-family: "Nunito", sans-serif;
-		padding: 16px;
-	}
+    .text-content {
+        font-size: 24px;
+        color: #e9ecef;
+        font-family: "Nunito", sans-serif;
+        padding: 16px;
+    }
     a {
-		color: #e9ecef;
-		font-family: "Nunito", sans-serif;
+        color: #e9ecef;
+        font-family: "Nunito", sans-serif;
         text-decoration: underline;
     }
     a:hover {
         text-decoration: none;
         color: yellow;
+    }
+    .current-container {
+        padding-bottom: 50px;
     }
 </style>

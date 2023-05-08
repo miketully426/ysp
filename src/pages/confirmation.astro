@@ -1,36 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-
 ---
+
 <Layout title="See you soon!">
     <Card height="50%" width="40%" margin="50px 30% 0 30%">
-        <div class="text-container">
-
-        </div>
+        <div class="text-container"></div>
         <p class="header-content">Thanks for applying!</p>
         <p class="text-content">We'll be in touch soon!</p>
+        <p class="text-content">
+            In the meantime, <a
+                href="https://youth-sing-praise-foundation-inc.square.site/s/shop"
+                target="_blank"
+                rel="noopener noreferrer">tution can be paid here.</a>
+        </p>
         <img id="godspell-logo" src="/images/godspell-brick-logo.jpg" />
     </Card>
 </Layout>
 <style>
     .text-container {
-		padding: 20px 0 20px 40px;
-		text-align: left;
-	}
-	.header-content {
+        padding: 20px 0 20px 40px;
+        text-align: left;
+    }
+    .header-content {
         font-size: 48px;
-		color: #e9ecef;
-		font-family: "Roboto", sans-serif;
-	}
+        color: #e9ecef;
+        font-family: "Roboto", sans-serif;
+    }
     .text-content {
         padding-top: 20px;
         font-size: 24px;
-        color: #e9ecef
+        color: #e9ecef;
     }
     #godspell-logo {
-    padding-top: 5%;
-    max-height: 70%;
-    max-width: 90%;
+        padding-top: 5%;
+        max-height: 70%;
+        max-width: 90%;
+    }
+    a {
+        color: #e9ecef;
+        font-family: "Nunito", sans-serif;
+        text-decoration: underline;
     }
 </style>
