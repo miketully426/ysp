@@ -1,25 +1,28 @@
 ---
 export interface Props {
     label: string;
-    width: number
+    width: number;
 }
 const { label, width } = Astro.props;
-const margin = (100 - width)/2
-const widthFinal = `${width}%`
-const marginFinal = `30px ${margin}% 0 ${margin}%`
+const widthFinal = `${width}%`;
+
 ---
 <div class="card-label">
     {label}
 </div>
-<style define:vars={{widthFinal, marginFinal}}>
+<style define:vars={{widthFinal}}>
     	.card-label {
 		font-family: "Roboto", sans-serif;
 		font-size: 30px;
 		background-color: rgba(156, 54, 181, 0.8);
 		border-radius: 30px 30px 0 0;
 		width: var(--widthFinal);
+		min-width: 230px;
 		height: 40px;
 		color: #e9ecef;
-		margin: var(--marginFinal);
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		
 	}
 </style>
