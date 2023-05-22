@@ -1,0 +1,53 @@
+---
+import Layout from "./Layout.astro";
+import Card from "../components/Card.astro"
+const { frontmatter } = Astro.props;
+---
+<Layout title={frontmatter.name}>
+    <div class="card-wrapper">
+    <Card height="auto" width="85%" margin="0 7.5% 0 7.5%">
+        <div class="bio-container">
+        <img src={frontmatter.photo}>
+        <div>
+            <h1>{frontmatter.name}</h1>
+            <h2>{frontmatter.title}</h2>
+            <p class='text-content' set:html={frontmatter.bio}></p>
+        </div>
+    </div>
+    </Card>
+    </div>
+</Layout>
+<style>
+    .card-wrapper{
+        margin-top: 40px;
+    }
+    .bio-container {
+        display: flex;
+        margin: 20px;
+    }
+    .text-content {
+        font-size: 20px;
+        color: #e9ecef;
+        font-family: "Nunito", sans-serif;
+        padding: 16px;
+        text-align: left;
+    }
+    img {
+        display: b;
+        max-width: 20%;
+        height: 100%;
+    }
+    a {
+        color: #e9ecef;
+        font-family: "Nunito", sans-serif;
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: none;
+        color: yellow;
+    }
+    h1, h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #e9ecef
+    }
+</style>

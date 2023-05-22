@@ -1,0 +1,59 @@
+---
+import About from '../../../layouts/About.astro'
+---
+    <About title='YSP Staff'>
+        <div class="content-window">
+            <div class='content'>
+                <h1><a href="/about/staff/brad">Bradley J. Behrmann</a></h1>
+                <h2>Theatrical Director</h2>
+            </div>
+            <div class='content'>
+                <h1><a href="/about/staff/orin">Orin Johnson</a></h1>
+                <h2>Music Director</h2>
+            </div>
+            <div class='content'>
+                <h1>Erin Hammond</h1>
+                <h2>Executive Director</h2>
+            </div>
+            <div class='content'>
+                <h1><a href="/about/staff/erin_s">Erin Simmons</a></h1>
+                <h2>Program Director</h2>
+            </div>
+            <div class='content'>
+                <h1><a href="/about/staff/katie">Katie (Reitano) Horner</a></h1>
+                <h2>Program Director</h2>
+            </div>
+            <div class='content'>
+                <h1>Sam Herbig</h1>
+                <h2>Prayer Coordinator</h2>
+            </div>
+            <div class='content'>
+                <h1>Jamie Perkins</h1>
+                <h2>Set Designer</h2>
+            </div>
+        </div>
+    </About>
+<style>
+    .content {
+        flex: 0 0 50%;
+        padding-top: 20px;
+    }
+    .content-window {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    a {
+        color: #e9ecef;
+        font-family: "Roboto", sans-serif;
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: none;
+        color: yellow;
+    }
+    h1, h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #e9ecef
+    }
+</style>
