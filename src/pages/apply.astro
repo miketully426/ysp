@@ -181,7 +181,8 @@ const voiceTypes = ["", "Bass", "Tenor", "Alto", "Soprano"];
 					options={shirtSizes}
 				/>
 				<br />
-				<Input label="Audition Video Link" name="audition" />
+				<label><a href="/audition" target="_blank"> Audition Video</a> Link</label>
+				<Input label="" name="audition" />
 			</div>
 		</Card>
 		<p class='error-box'>All fields must be completed</p>
@@ -228,4 +229,18 @@ const voiceTypes = ["", "Bass", "Tenor", "Alto", "Soprano"];
 	form {
 		padding-bottom: 40px;
 	}
+    a {
+		color: #e9ecef;
+		font-family: "Nunito", sans-serif;
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: none;
+        color: yellow;
+    }
+	label {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        color: #e9ecef;
+    }
 </style>
